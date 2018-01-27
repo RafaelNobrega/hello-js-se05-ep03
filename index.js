@@ -9,7 +9,7 @@ const baseURL = ("http://thecatapi.com/")
 const api = axios.create({ baseURL})
 
 app.get("/cade-meu-gato", (req, res) =>{
-    api.get('/users/${req.params.username}/followers',)
+    api.get('/api/images/get',)
         .then(ret => res.send(ret.data))
         .catch(err => res.status(500).send(err)) 
 })
