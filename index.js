@@ -4,11 +4,11 @@ const express = require("express")
 
 const app = express()
 
-const baseURL = ("https://api.github.com")
+const baseURL = ("http://thecatapi.com/")
 
 const api = axios.create({ baseURL})
 
-app.get("/seguidores/:username", (req, res) =>{
+app.get("/cade-meu-gato", (req, res) =>{
     api.get('/users/${req.params.username}/followers',)
         .then(ret => res.send(ret.data))
         .catch(err => res.status(500).send(err)) 
